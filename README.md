@@ -1,4 +1,4 @@
 CrowdFMS
 ========
 
-CrowdStrike Feed Management System
+CrowdStrike Feed Management System [CrowdFMS]
