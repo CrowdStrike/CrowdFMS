@@ -27,12 +27,12 @@ Usage and Tools:
  crowdfms.py - Primary sample collection system
 
  sample_details - Fetch details about a sample stored in the lcoal database 
-  + Usage: sample_details.py -f <HASH>       # Hash can be either MD5, SHA1 or SHA256
+  + Usage: sample_details.py -f -HASH-       # Hash can be either MD5, SHA1 or SHA256
 
  fetch_file - copy file from database to current working directory
-  + Usage: fetch_file -f <HASH>   # Hash can be either MD5, SHA1 or SHA256 
+  + Usage: fetch_file -f -HASH-   # Hash can be either MD5, SHA1 or SHA256 
 
  add_action - Add action to preform on new sample rule metch
-  + Usage: add_action -y <Yara Rule Name> -c <Command to Execute>   # Command to Execute must contain %s where sample path should go
+  + Usage: add_action -y -Yara Rule Name- -c -Command to Execute-   # Command to Execute must contain %s where sample path should go
  
  
