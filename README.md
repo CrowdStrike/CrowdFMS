@@ -35,4 +35,8 @@ Usage and Tools:
  add_action - Add action to preform on new sample rule metch
   + Usage: add_action -y -Yara Rule Name- -c -Command to Execute-   # Command to Execute must contain %s where sample path should go
  
- 
+ add_action - Add action to preform on new sample rule metch
+  + Usage: add_action -y -Yara Rule Name- -c -Command to Execute-   # Command to Execute must contain %s where sample path should go
+
+ list_actions - List all Yara -> matches
+  + Usage: list_actions
