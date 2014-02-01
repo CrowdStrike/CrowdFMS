@@ -39,7 +39,10 @@ def func_parse_api_key(lst_tmp_key):
 # Pull the JSON feed from VT and return dict to main
 def func_pull_feed(str_api_key):
 	req_user_agent = {'User-agent': 'VirusTotal FMS 1.0'}
-	vt_request_results = requests.get("https://www.virustotal.com/intelligence/hunting/notifications-feed/?key=%s" % str_api_key, headers=req_user_agent)
+	try:
+		vt_request_results = requests.get("https://www.virustotal.com/intelligence/hunting/notifications-feed/?key=%s" % str_api_key, headers=req_user_agent)
+	except:
+		return 0
 	try:
 		return json.loads(vt_request_results.content)
 	except ValueError:
