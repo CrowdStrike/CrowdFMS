@@ -51,8 +51,11 @@ def func_pull_feed(str_api_key):
 
 # Convert VT timestamps to Epoch Timestamp
 def func_to_epoch(str_timestamp):
-	format = '%Y-%m-%d %H:%M:%S'
-	return int(time.mktime(time.strptime(str_timestamp, format)))
+	try:
+		format = '%Y-%m-%d %H:%M:%S'
+		return int(time.mktime(time.strptime(str_timestamp.rstrip(), format)))
+	except:
+		return 1
 
 # Download sample and store it to disk
 def func_download_sample(str_api_key, str_path, str_hash):
