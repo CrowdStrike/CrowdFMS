@@ -26,7 +26,7 @@ Please also place your API key in either .virustotal or ~/.virustotal
 Usage and Tools:
  crowdfms.py - Primary sample collection system
 
- sample_details - Fetch details about a sample stored in the lcoal database 
+ sample_details - Fetch details about a sample stored in the local database 
   + Usage: sample_details.py -f -HASH-       # Hash can be either MD5, SHA1 or SHA256
 
  fetch_file - copy file from database to current working directory
