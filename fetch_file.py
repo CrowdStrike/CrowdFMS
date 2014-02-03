@@ -13,7 +13,7 @@ from lib.objects import *
 def main():
 	# Parse arguments and define user's supplied hash 
 	parser = argparse.ArgumentParser()
-	parser.add_argument("-f", dest="file", help="Hash of file (MD5 / SHA1 / SHA256", required=True)
+	parser.add_argument("-f", dest="file", help="Hash of file (MD5 / SHA1 / SHA256)", required=True)
 	
 	args = parser.parse_args()
 	usr_hash = args.file
