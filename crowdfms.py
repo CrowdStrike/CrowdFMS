@@ -17,6 +17,7 @@ LOOP_TIME = 300
 STORAGE_PATH = "./samples/"
 RUN = True
 API_KEY = func_set_api_key()
+DEFAULT_ACTION = "echo %s"
 
 def main():
 	print " [+] Starting CrowdFMS"
@@ -77,12 +78,20 @@ def loop_pull_feed():
 			
 			if ( tmp_sample.insert_db() == True ):
 				tmp_sample.print_short()
-			
+				if '%s' in DEFAULT_ACTION:
+					try:
+						thread.start_new_thread( funct_run_rule_action, (DEFAULT_ACTION, sample_path ) )
+					except:
+						funct_run_rule_action( DEFAULT_ACTION , sample_path )				
+				
+				
+				
 				if (str(vt_notif["subject"]) in rule_actions ):
 					try:
 						thread.start_new_thread( funct_run_rule_action, (rule_actions[vt_notif["subject"]], sample_path ) )
 					except:
 						funct_run_rule_action( rule_actions[vt_notif["subject"]] , sample_path )
+				
 			else:
 				print " [-] Problem submitting sample to DB"
 	
