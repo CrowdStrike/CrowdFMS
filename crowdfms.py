@@ -17,7 +17,7 @@ LOOP_TIME = 300
 STORAGE_PATH = "./samples/"
 RUN = True
 API_KEY = func_set_api_key()
-DEFAULT_ACTION = "echo %s"
+DEFAULT_ACTION = ""
 
 def main():
 	print " [+] Starting CrowdFMS"
